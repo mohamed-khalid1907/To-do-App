@@ -1,0 +1,95 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: max-content;
+    margin: auto;
+}
+
+.container form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.container input
+{
+    margin: 10px;
+}
+
+.container input[type="text"]
+{
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+    color: orangered;
+}
+
+.container input[type="button"]
+{
+    padding: 5px 10px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tasks
+{
+    background-color: #eee;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    min-height: 50px;
+
+
+}
+
+.task
+{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 6px;
+}
+
+.task button
+{
+    border: none;
+    background-color: rgb(226, 61, 2);
+    color: white;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task button:hover,
+.container input[type="button"]:hover
+{
+    background-color: rgb(250, 99, 44);
+}
