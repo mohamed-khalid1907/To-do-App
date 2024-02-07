@@ -27,6 +27,7 @@ for (let i = 1; i <= window.localStorage.length; i++) {
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("add")) {
     let content = document.getElementsByTagName("input")[0].value;
+    content = content.trimEnd();
     if (content.length > 0) {
       let task = document.createElement("div");
       task.classList.add("task");
@@ -44,6 +45,9 @@ document.addEventListener("click", function (e) {
     }
   } else if (e.target.classList.contains("delete")) {
     let target = e.target;
+    if (arr.length == 1) {
+      window.localStorage.clear();
+    }
     for (let i = 0; i < arr.length; i++) {
       if (target.previousElementSibling.innerHTML === arr[i]) {
         arr.splice(i, 1);
